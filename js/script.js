@@ -21,7 +21,21 @@ const tasks = [
 const app = Vue.createApp({
     data(){
         return{
+            newTask: '',
             tasks
+        }
+    },
+    computed:{
+        taskObject(){
+            return{
+                text: this.newTask
+            }
+        }
+    },
+    methods:{
+        addTask(){
+            this.tasks.push(this.taskObject);
+            this.newTask = '';
         }
     }
 });

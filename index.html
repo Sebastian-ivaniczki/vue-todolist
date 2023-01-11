@@ -23,9 +23,13 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfmAdPP9pIRQyY10W07j5LPF8TTw72zpXCxAO_PPPFCw&s" alt="">
             
         </div>
-        <h1 class="text-center">To do list</h1>
-        <div class="container d-flex justify-content-center ">
-            <ul class="list-group">
+        <div class="w-50 mx-auto ">
+            <h1 class="text-center">To do list</h1>
+            <div class="input-group mt-3">
+                <input type="text" class="form-control" placeholder="Aggiungi task" v-model="newTask">
+                <button @click="addTask" class="btn btn-outline-success" type="button">Aggiungi</button>
+              </div>
+            <ul class="list-group mt-4">
                 <li v-for="task in tasks" class="list-group-item d-flex justify-content-between">{{ task.text }}
                     <button type="button" class="btn-close"></button>
                 </li>
