@@ -31,7 +31,7 @@
                 <button @click="addTask"  class="btn btn-outline-success" type="button">Aggiungi</button>
                 
               </div>
-              <button @click=" allTasksDone" type="button" class="btn btn-outline-primary mt-4">All tasks done</button>
+              <button v-if="tasks.length" @click=" allTasksDone" type="button" class="btn btn-outline-primary mt-4">All tasks done</button>
             <ul class="list-group mt-4">
                 <li v-for="(task, i) in tasks" class="list-group-item d-flex justify-content-between"><span  @click="taskDone(task)" v-bind:class="{'done': task.done}">{{ task.text }}</span>
                     <button @click="deleteTask(i)" type="button" class="btn-close"></button>
