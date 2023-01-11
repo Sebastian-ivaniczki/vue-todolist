@@ -1,0 +1,8 @@
+ul{
+    width: 40%;
+    margin-top: 2rem;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+}
