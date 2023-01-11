@@ -1,5 +1,10 @@
-
+.done{
+    text-decoration: line-through;
+}
 .img-container{
     display: flex;
     justify-content: center;
+}
+span{
+    cursor: pointer;
 }

@@ -23,12 +23,14 @@ const app = Vue.createApp({
         return{
             newTask: '',
             tasks
+           
         }
     },
     computed:{
         taskObject(){
             return{
-                text: this.newTask
+                text: this.newTask,
+                done: false
             }
         }
     },
@@ -36,6 +38,9 @@ const app = Vue.createApp({
         addTask(){
             this.tasks.push(this.taskObject);
             this.newTask = '';
+        },
+        taskDone(task){
+            task.done = !task.done
         }
     }
 });

@@ -30,7 +30,7 @@
                 <button @click="addTask" class="btn btn-outline-success" type="button">Aggiungi</button>
               </div>
             <ul class="list-group mt-4">
-                <li v-for="task in tasks" class="list-group-item d-flex justify-content-between">{{ task.text }}
+                <li v-for="task in tasks" class="list-group-item d-flex justify-content-between"><span  @click="taskDone(task)" v-bind:class="{'done': task.done}">{{ task.text }}</span>
                     <button type="button" class="btn-close"></button>
                 </li>
                 
