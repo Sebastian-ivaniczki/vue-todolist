@@ -47,6 +47,11 @@ const app = Vue.createApp({
         },
         deleteTask(index){
             this.tasks.splice(index, 1);
+        },
+        allTasksDone(){
+            for(let task of this.tasks) {
+                task.done = true;
+            }
         }
     }
 });
